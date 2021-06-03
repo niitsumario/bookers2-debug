@@ -1,11 +1,11 @@
-<% if book.errors.any? %>
-  <%= book.errors.count %>error
-    <% book.errors.full_messages.each do |message| %>
+<% if book_new.errors.any? %>
+  <%= book_new.errors.count %>error
+    <% book_new.errors.full_messages.each do |message| %>
       <%= message %>
     <% end %>
 <% end %>
 
-<%= form_with model: book, local:true do |f| %>
+<%= form_with model: book_new, local:true do |f| %>
   <div class="form-group">
     <%= f.label :title %>
     <%= f.text_field :title, class: 'form-control book_title' %>
